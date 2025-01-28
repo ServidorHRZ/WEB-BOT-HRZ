@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOT HRZ - Pronósticos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/Icono.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+</head>
+<body>
+    <div id="payment-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Selecciona tu método de pago</h2>
+            <div class="payment-options">
+                <div class="payment-option" onclick="selectPayment('nequi')">
+                    <img src="img/img7.jpeg" alt="Nequi">
+                    <span>Nequi</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('daviplata')">
+                    <img src="img/img8.jpeg" alt="Daviplata">
+                    <span>Daviplata</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('bancolombia')">
+                    <img src="img/img9.jpeg" alt="Bancolombia">
+                    <span>Bancolombia</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('paypal')">
+                    <img src="img/img10.jpeg" alt="PayPal">
+                    <span>PayPal</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('nu')">
+                    <img src="img/img11.jpeg" alt="Nu">
+                    <span>Nu</span>
+                </div>
+                <div class="payment-option wu-option" onclick="selectPayment('wu')">
+                    <img src="img/img12.jpeg" alt="Western Union">
+                    <span>Western Union</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav>
+        <div class="logo">BOT HRZ</div>
+        <button class="hamburger" aria-label="Menú">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <div class="nav-links">
+            <a href="#inicio">Inicio</a>
+            <a href="#caracteristicas">Características</a>
+            <a href="#planes">Planes</a>
+            <a href="#descargar">Descargar</a>
+        </div>
+    </nav>
+
+    <header id="inicio">
+        <div class="header-content">
+            <div class="header-text">
+                <span class="badge">BOT HRZ 1.0</span>
+                <h1>Inteligencia Artificial al Servicio de tus Apuestas</h1>
+                <p class="subtitle">Maximiza tus ganancias con análisis predictivo avanzado y estadísticas en tiempo real</p>
+                <div class="cta-group">
+                    <a href="#planes" class="cta-button primary">
+                        <span>Comenzar Ahora</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#caracteristicas" class="cta-button secondary">
+                        <i class="fas fa-play"></i>
+                        <span>Ver Demo</span>
+                    </a>
+                </div>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <span class="stat-number">80%</span>
+                        <span class="stat-label">Precisión</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">24/7</span>
+                        <span class="stat-label">Soporte</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50K+</span>
+                        <span class="stat-label">Usuarios</span>
+                    </div>
+                </div>
+            </div>
+            <div class="header-image">
+                <img src="img/img6.jpeg" alt="SportsPro Bot Dashboard" class="main-image">
+                <div class="floating-card card-1">
+                    <i class="fas fa-chart-line"></i>
+                    <span>+145% ROI</span>
+                </div>
+                <div class="floating-card card-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Predicción Exitosa</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="caracteristicas">
+        <h2>Características</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <i class="fas fa-robot"></i>
+                <h3>IA Predictiva</h3>
+                <p>Algoritmos avanzados de machine learning para pronósticos precisos con +80% de efectividad</p>
+                <ul class="feature-details">
+                    <li><i class="fas fa-check-circle"></i>Análisis en tiempo real</li>
+                    <li><i class="fas fa-check-circle"></i>Patrones históricos</li>
+                    <li><i class="fas fa-check-circle"></i>Aprendizaje continuo</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-chart-bar"></i>
+                <h3>Análisis Estadístico</h3>
+                <p>Datos detallados y estadísticas avanzadas para toma de decisiones informada</p>
+                <ul class="feature-details">
+                    <li><i class="fas fa-check-circle"></i>Métricas en vivo</li>
+                    <li><i class="fas fa-check-circle"></i>Tendencias históricas</li>
+                    <li><i class="fas fa-check-circle"></i>Gráficos interactivos</li>
+                </ul>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-globe"></i>
+                <h3>Versión Web</h3>
+                <p>Accede a todas las funciones desde cualquier navegador web moderno</p>
+                <ul class="feature-details">
+                    <li><i class="fas fa-check-circle"></i>Acceso universal</li>
+                    <li><i class="fas fa-check-circle"></i>Interfaz adaptativa</li>
+                    <li><i class="fas fa-check-circle"></i>Siempre actualizado</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="planes">
+        <h2>Planes de Suscripción</h2>
+        <div class="pricing-cards">
+            <div class="price-card">
+                <div class="card-header">
+                    <h3>Plan Mensual</h3>
+                    <div class="price">$2 USD</div>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i>Acceso completo a pronósticos</li>
+                        <li><i class="fas fa-check"></i>Resultados en tiempo real</li>
+                        <li><i class="fas fa-check"></i>Noticias deportivas</li>
+                        <li><i class="fas fa-check"></i>Soporte básico</li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="buy-button" onclick="showPaymentModal('monthly')">
+                    <span>Comenzar Ahora</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="price-card featured">
+                <div class="popular-badge">Más Popular</div>
+                <div class="card-header">
+                    <h3>Plan Anual</h3>
+                    <div class="price">$22 USD</div>
+                    <div class="savings">¡Ahorra 2 meses!</div>
+                </div>
+                <div class="card-features">
+                    <ul>
+                        <li><i class="fas fa-check"></i>Todos los beneficios mensuales</li>
+                        <li><i class="fas fa-check"></i>Soporte prioritario 24/7</li>
+                        <li><i class="fas fa-check"></i>Análisis exclusivos</li>
+                        <li><i class="fas fa-check"></i>Estadísticas avanzadas</li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)" class="buy-button featured" onclick="showPaymentModal('annual')">
+                    <span>Obtener Descuento</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="dispositivos">
+        <h2>Nuestro Bot en Acción</h2>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="bot-preview">
+                        <img src="img/img2.jpeg" alt="Inicio del Bot" loading="lazy">
+                        <div class="preview-info">
+                            <span class="section-tag">Inicio</span>
+                            <h3>Panel Principal</h3>
+                            <p>Dashboard intuitivo con toda la información relevante</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bot-preview">
+                        <img src="img/img3.jpeg" alt="Pronósticos" loading="lazy">
+                        <div class="preview-info">
+                            <span class="section-tag">Pronósticos</span>
+                            <h3>Predicciones Avanzadas</h3>
+                            <p>Análisis detallado con IA para maximizar el éxito</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bot-preview">
+                        <img src="img/img4.jpeg" alt="Resultados" loading="lazy">
+                        <div class="preview-info">
+                            <span class="section-tag">Resultados</span>
+                            <h3>Seguimiento en Vivo</h3>
+                            <p>Resultados y estadísticas en tiempo real</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="bot-preview">
+                        <img src="img/img5.jpeg" alt="Noticias" loading="lazy">
+                        <div class="preview-info">
+                            <span class="section-tag">Noticias</span>
+                            <h3>Últimas Actualizaciones</h3>
+                            <p>Mantente informado con las noticias más relevantes</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+
+    <section id="descargar" class="download-section">
+        <div class="download-container">
+            <div class="download-header">
+                <h2>Descarga BOT HRZ</h2>
+                <p class="download-subtitle">Disponible en todas tus plataformas favoritas y directamente desde tu navegador</p>
+            </div>
+            
+            <div class="platform-grid">
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-android"></i>
+                    </div>
+                    <h3>Android</h3>
+                    <p>Versión 1.0.5</p>
+                    <ul class="platform-features">
+                        <li><i class="fas fa-check"></i> Optimizado para Android 8+</li>
+                        <li><i class="fas fa-check"></i> Bajo consumo de batería</li>
+                        <li><i class="fas fa-check"></i> Notificaciones instantáneas</li>
+                    </ul>
+                    <a href="#" class="download-button">
+                        <i class="fab fa-android"></i>
+                        <span>
+                            <small>Descargar</small>
+                            
+                        </span>
+                    </a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-apple"></i>
+                    </div>
+                    <h3>iOS</h3>
+                    <p>Versión 1.0.5</p>
+                    <ul class="platform-features">
+                        <li><i class="fas fa-check"></i> Compatible iOS 14+</li>
+                        <li><i class="fas fa-check"></i> Widgets nativos</li>
+                        <li><i class="fas fa-check"></i> iCloud Sync</li>
+                    </ul>
+                    <a href="#" class="download-button">
+                        <i class="fab fa-apple"></i>
+                        <span>
+                            <small>Descargar</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fab fa-windows"></i>
+                    </div>
+                    <h3>Windows</h3>
+                    <p>Versión 1.0.5</p>
+                    <ul class="platform-features">
+                        <li><i class="fas fa-check"></i> Windows 10/11</li>
+                        <li><i class="fas fa-check"></i> Modo escritorio avanzado</li>
+                        <li><i class="fas fa-check"></i> Multi-monitor</li>
+                    </ul>
+                    <a href="#" class="download-button">
+                        <i class="fab fa-windows"></i>
+                        <span>
+                            <small>Descargar</small>
+                        </span>
+                    </a>
+                </div>
+
+                <div class="platform-card">
+                    <div class="platform-icon">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3>Versión Web</h3>
+                    <p>Versión 1.0.5</p>
+                    <ul class="platform-features">
+                        <li><i class="fas fa-check"></i> Acceso desde cualquier navegador</li>
+                        <li><i class="fas fa-check"></i> Sin instalación necesaria</li>
+                        <li><i class="fas fa-check"></i> Sincronización automática</li>
+                    </ul>
+                    <a href="https://app.bothrz.com" target="_blank" class="download-button">
+                        <i class="fas fa-globe"></i>
+                        <span>
+                            <small>Acceder Web</small>
+                        </span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="download-footer">
+                <div class="system-requirements">
+                    <h4>Requisitos del Sistema</h4>
+                    <p>Windows 10/11, Android 8+, iOS 14+ • 2GB RAM • 100MB espacio libre</p>
+                </div>
+                <div class="download-stats">
+                    <div class="stat">
+                        <span class="stat-number">100K+</span>
+                        <span class="stat-label">Descargas</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">4.8/5</span>
+                        <span class="stat-label">Valoración</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 BOT HRZ. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
+    <script>
+        const modal = document.getElementById('payment-modal');
+        const closeBtn = document.getElementsByClassName('close')[0];
+        let currentPlan = '';
+
+        function showPaymentModal(plan) {
+            currentPlan = plan;
+            modal.style.display = 'block';
+            document.getElementById('payment-amount').textContent = 
+                plan === 'monthly' ? '$2 USD' : '$22 USD';
+            
+            // Mostrar/ocultar Western Union según el plan
+            const wuOption = document.querySelector('.wu-option');
+            wuOption.style.display = plan === 'annual' ? 'block' : 'none';
+        }
+
+        function selectPayment(method) {
+            const planText = currentPlan === 'monthly' ? 'mensual ($2 USD)' : 'anual ($22 USD)';
+            const message = `Hola, quiero adquirir el bot con el plan ${planText} mediante ${method.toUpperCase()}`;
+            const whatsappUrl = `https://wa.me/573167699072?text=${encodeURIComponent(message)}`;
+            window.open(whatsappUrl, '_blank');
+            modal.style.display = 'none';
+        }
+
+        closeBtn.onclick = function(event) {
+            event.preventDefault(); // Prevenir comportamiento por defecto
+            modal.style.display = 'none';
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                event.preventDefault(); // Prevenir comportamiento por defecto
+                modal.style.display = 'none';
+            }
+        }
+
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navLinks.classList.toggle('active');
+            document.body.classList.toggle('no-scroll');
+        });
+
+        // Cerrar menú al hacer click en los enlaces
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                document.body.classList.remove('no-scroll');
+            });
+        });
+
+        // Animación al scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .price-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            observer.observe(el);
+        });
+
+        // Configuración del carrusel
+        const swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            loop: true,
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+            effect: 'fade',
+            fadeEffect: {
+                crossFade: true
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            }
+        });
+
+        // Configuración del lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'albumLabel': "Imagen %1 de %2",
+            'fadeDuration': 300,
+            'imageFadeDuration': 300
+        });
+    </script>
+</body>
+</html>
