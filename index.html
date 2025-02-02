@@ -146,7 +146,7 @@
             <div class="price-card">
                 <div class="card-header">
                     <h3>Plan Mensual</h3>
-                    <div class="price">$2 USD</div>
+                    <div class="price">$2,40 USD</div>
                 </div>
                 <div class="card-features">
                     <ul>
@@ -337,7 +337,7 @@
             currentPlan = plan;
             modal.style.display = 'block';
             document.getElementById('payment-amount').textContent = 
-                plan === 'monthly' ? '$2 USD' : '$22 USD';
+                plan === 'monthly' ? '$2,40 USD' : '$22 USD';
             
             // Mostrar/ocultar Western Union según el plan
             const wuOption = document.querySelector('.wu-option');
@@ -345,7 +345,7 @@
         }
 
         function selectPayment(method) {
-            const planText = currentPlan === 'monthly' ? 'mensual ($2 USD)' : 'anual ($22 USD)';
+            const planText = currentPlan === 'monthly' ? 'mensual ($2,40 USD)' : 'anual ($22 USD)';
             const message = `Hola, quiero adquirir el bot con el plan ${planText} mediante ${method.toUpperCase()}`;
             const whatsappUrl = `https://wa.me/573167699072?text=${encodeURIComponent(message)}`;
             window.open(whatsappUrl, '_blank');
